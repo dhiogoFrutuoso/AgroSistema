@@ -1,0 +1,36 @@
+﻿@media (max-width: 1024px) {
+  .premium-panel {
+    padding: 28px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .premium-panel {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .leaflet-container {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    line-height: 1.08;
+  }
+
+  .premium-panel {
+    padding: 18px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,104 @@
+﻿.premium-panel {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.88), rgba(2, 6, 23, 0.92)),
+    radial-gradient(circle at top, rgba(22, 163, 74, 0.14), transparent 40%);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  border-radius: 28px;
+  padding: 40px;
+}
+
+.glass-box {
+  min-height: 130px;
+  border-radius: 22px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.text-gold {
+  color: #c49a4a;
+}
+
+.bg-gold {
+  background: #c49a4a;
+}
+
+.bg-premium-dark {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(196, 154, 74, 0.18), transparent 35%),
+    radial-gradient(circle at 90% 90%, rgba(22, 163, 74, 0.16), transparent 35%),
+    #020617;
+}
+.premium-3d-button {
+  border-radius: 18px;
+  background: linear-gradient(135deg, #b7791f, #d69e2e, #f6ad55);
+  color: white;
+  font-weight: 900;
+  letter-spacing: .04em;
+  box-shadow:
+    0 8px 0 rgba(120, 74, 15, .95),
+    0 18px 40px rgba(0, 0, 0, .45),
+    inset 0 1px 0 rgba(255,255,255,.35);
+  transition: all .18s ease;
+}
+
+.premium-3d-button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.premium-3d-button:active {
+  transform: translateY(5px);
+  box-shadow:
+    0 3px 0 rgba(120, 74, 15, .95),
+    0 10px 22px rgba(0, 0, 0, .4);
+}
+
+.premium-green-button {
+  border-radius: 18px;
+  background: linear-gradient(135deg, #047857, #10b981, #22c55e);
+  color: white;
+  font-weight: 900;
+  box-shadow:
+    0 8px 0 rgba(4, 120, 87, .95),
+    0 18px 40px rgba(0, 0, 0, .45),
+    inset 0 1px 0 rgba(255,255,255,.25);
+  transition: all .18s ease;
+}
+
+.premium-green-button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.premium-green-button:active {
+  transform: translateY(5px);
+  box-shadow:
+    0 3px 0 rgba(4, 120, 87, .95),
+    0 10px 22px rgba(0, 0, 0, .4);
+}
+
+.premium-card-hover {
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.premium-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 197, 94, .35);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.55),
+    0 0 35px rgba(16,185,129,.14);
+}
+
+.leaflet-container {
+  background: #020617;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+}

@@ -1,0 +1,9 @@
+﻿.sidebar-logo-img {
+  width: 100%;
+  max-width: 235px;
+  height: 78px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,.40));
+}

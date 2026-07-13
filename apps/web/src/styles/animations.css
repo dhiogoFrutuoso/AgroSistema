@@ -1,0 +1,29 @@
+﻿@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(22, 163, 74, 0.18);
+  }
+
+  50% {
+    box-shadow: 0 0 42px rgba(196, 154, 74, 0.22);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.65s ease both;
+}
+
+.animate-soft-glow {
+  animation: softGlow 4s ease-in-out infinite;
+}

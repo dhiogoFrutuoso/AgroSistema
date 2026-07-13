@@ -1,0 +1,5 @@
+.funcionarios-page input,
+.funcionarios-page select,
+.funcionarios-page textarea {
+  color-scheme: dark;
+}

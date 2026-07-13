@@ -1,0 +1,52 @@
+﻿
+/* LOGO FINAL SIDEBAR */
+.sidebar-logo-final{
+    width:100% !important;
+    max-width:none !important;
+    height:180px !important;
+    object-fit:contain !important;
+    display:block !important;
+    margin:0 auto !important;
+    padding:10px 0 !important;
+    transform:scale(1.35) !important;
+    filter:drop-shadow(0 15px 30px rgba(0,0,0,.45));
+}
+
+
+/* SIDEBAR FINAL IGUAL AO MODELO */
+.sidebar-scroll-final::-webkit-scrollbar {
+  width: 14px;
+}
+
+.sidebar-scroll-final::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll-final::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(180deg, #facc15 0%, #22c55e 100%);
+}
+
+.sidebar-scroll-final {
+  scrollbar-width: thin;
+  scrollbar-color: #22c55e transparent;
+}
+
+/* SIDEBAR SCROLL FINAL */
+.sidebar-scroll-final::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sidebar-scroll-final::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll-final::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: linear-gradient(180deg, #facc15 0%, #22c55e 100%);
+}
+
+.sidebar-scroll-final {
+  scrollbar-width: thin;
+  scrollbar-color: #22c55e transparent;
+}

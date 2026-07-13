@@ -1,0 +1,657 @@
+.func-page {
+  min-height: 100vh;
+  padding: 30px;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(34, 197, 94, .25), transparent 32%),
+    radial-gradient(circle at 92% 10%, rgba(250, 204, 21, .16), transparent 28%),
+    linear-gradient(135deg, #020617 0%, #07111f 45%, #03110a 100%);
+}
+
+.func-hero,
+.func-card,
+.func-form,
+.func-panel,
+.func-modal-card {
+  border: 1px solid rgba(255,255,255,.10);
+  background: linear-gradient(145deg, rgba(15,23,42,.90), rgba(2,6,23,.74));
+  box-shadow: 0 28px 80px rgba(0,0,0,.34);
+  backdrop-filter: blur(20px);
+}
+
+.func-hero {
+  border-radius: 36px;
+  padding: 30px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.func-hero span {
+  color: #86efac;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.func-hero h1 {
+  margin: 10px 0 0;
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 1000;
+  letter-spacing: -2px;
+}
+
+.func-hero p {
+  color: #94a3b8;
+  line-height: 1.7;
+  max-width: 900px;
+}
+
+.func-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.func-hero-actions button,
+.func-title button,
+.func-actions button,
+.func-tabs button,
+.func-primary,
+.func-password button,
+.func-modal-head button {
+  border: 1px solid rgba(134,239,172,.22);
+  background: rgba(34,197,94,.12);
+  color: #dcfce7;
+  font-weight: 950;
+  border-radius: 16px;
+  padding: 11px 14px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.func-hero-actions button:hover,
+.func-title button:hover,
+.func-actions button:hover,
+.func-tabs button:hover,
+.func-primary:hover,
+.func-password button:hover,
+.func-modal-head button:hover {
+  transform: translateY(-1px);
+  background: rgba(34,197,94,.22);
+}
+
+.func-kpis {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.func-card {
+  border-radius: 28px;
+  padding: 22px;
+  min-height: 126px;
+}
+
+.func-card span {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.func-card strong {
+  display: block;
+  margin-top: 9px;
+  color: white;
+  font-size: 27px;
+  font-weight: 1000;
+}
+
+.func-card small {
+  display: block;
+  margin-top: 8px;
+  color: #64748b;
+}
+
+.func-card.green { border-color: rgba(34,197,94,.28); }
+.func-card.red { border-color: rgba(239,68,68,.28); }
+.func-card.yellow { border-color: rgba(250,204,21,.28); }
+.func-card.purple { border-color: rgba(168,85,247,.28); }
+.func-card.blue { border-color: rgba(56,189,248,.25); }
+
+.func-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.func-tabs button.active,
+.func-primary {
+  background: linear-gradient(135deg, #22c55e, #bef264);
+  color: #052e16;
+  box-shadow: 0 18px 45px rgba(34,197,94,.22);
+}
+
+.func-layout {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.func-form,
+.func-panel {
+  border-radius: 32px;
+  padding: 24px;
+}
+
+.func-title,
+.func-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.func-title h2,
+.func-toolbar h2 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+  font-weight: 1000;
+}
+
+.func-title p,
+.func-toolbar p {
+  margin: 6px 0 0;
+  color: #94a3b8;
+}
+
+.func-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 13px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.func-form input,
+.func-form select,
+.func-form textarea,
+.func-filters input,
+.func-filters select {
+  width: 100%;
+  border: 1px solid rgba(148,163,184,.2);
+  background: rgba(2,6,23,.72);
+  color: white;
+  border-radius: 15px;
+  padding: 12px 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.func-form textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.func-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.func-password {
+  display: grid;
+  grid-template-columns: 1fr 92px;
+  gap: 8px;
+}
+
+.func-password button {
+  color: #052e16;
+  background: linear-gradient(135deg, #facc15, #fde68a);
+}
+
+.func-switch {
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 20px;
+  background: rgba(2,6,23,.42);
+}
+
+.func-switch input {
+  width: 24px;
+  height: 24px;
+  accent-color: #22c55e;
+}
+
+.func-switch strong {
+  color: white;
+}
+
+.func-switch small {
+  color: #94a3b8;
+}
+
+.func-permissions {
+  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(2,6,23,.42);
+  border-radius: 22px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.func-permissions strong {
+  display: block;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.func-permissions div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.func-permissions label {
+  margin: 0;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.func-permissions input {
+  width: 18px;
+  height: 18px;
+  accent-color: #22c55e;
+}
+
+.func-primary {
+  width: 100%;
+}
+
+.func-filters {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr .7fr;
+  gap: 10px;
+}
+
+.func-list {
+  display: grid;
+  gap: 13px;
+}
+
+.func-item {
+  display: grid;
+  grid-template-columns: 64px 1fr 340px;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(2,6,23,.58);
+  border-radius: 26px;
+  padding: 16px;
+  transition: .2s ease;
+}
+
+.func-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(34,197,94,.35);
+  background: rgba(15,23,42,.82);
+}
+
+.func-avatar {
+  height: 58px;
+  width: 58px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #22c55e, #facc15);
+  color: #052e16;
+  font-weight: 1000;
+}
+
+.func-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.func-line strong {
+  color: white;
+  font-size: 19px;
+}
+
+.func-info p {
+  margin: 8px 0 0;
+  color: #cbd5e1;
+}
+
+.func-info small {
+  display: block;
+  margin-top: 6px;
+  color: #64748b;
+}
+
+.func-badge {
+  border-radius: 999px;
+  padding: 5px 9px;
+  font-size: 11px;
+  font-weight: 1000;
+  border: 1px solid rgba(255,255,255,.12);
+  color: #e2e8f0;
+  background: rgba(255,255,255,.08);
+}
+
+.func-badge.ativo,
+.func-badge.ok {
+  color: #bbf7d0;
+  border-color: rgba(34,197,94,.25);
+  background: rgba(34,197,94,.13);
+}
+
+.func-badge.bloqueado {
+  color: #fecaca;
+  border-color: rgba(239,68,68,.25);
+  background: rgba(239,68,68,.13);
+}
+
+.func-badge.perfil {
+  color: #fde68a;
+  border-color: rgba(250,204,21,.25);
+  background: rgba(250,204,21,.11);
+}
+
+.func-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.func-actions button {
+  padding: 9px 10px;
+  font-size: 11px;
+}
+
+.func-actions .danger,
+.func-actions .warn {
+  color: #fecaca;
+  border-color: rgba(239,68,68,.25);
+  background: rgba(239,68,68,.13);
+}
+
+.func-empty,
+.func-login-help {
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px dashed rgba(148,163,184,.24);
+  color: #94a3b8;
+}
+
+.func-login-help h3 {
+  margin: 0 0 14px;
+  color: white;
+}
+
+.func-matrix {
+  overflow-x: auto;
+}
+
+.func-matrix-head,
+.func-matrix-row {
+  min-width: 980px;
+  display: grid;
+  grid-template-columns: 220px repeat(8, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 12px;
+}
+
+.func-matrix-head {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.func-matrix-row {
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.func-matrix-row strong {
+  color: white;
+}
+
+.func-matrix-row span {
+  text-align: center;
+  border-radius: 999px;
+  padding: 7px;
+  font-size: 11px;
+  font-weight: 1000;
+}
+
+.func-matrix-row .yes {
+  color: #bbf7d0;
+  background: rgba(34,197,94,.13);
+}
+
+.func-matrix-row .no {
+  color: #fecaca;
+  background: rgba(239,68,68,.13);
+}
+
+.func-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.74);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.func-modal-card {
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 32px;
+  padding: 22px;
+}
+
+.func-modal-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.func-modal-head h2 {
+  margin: 0;
+  color: white;
+}
+
+.func-modal pre {
+  white-space: pre-wrap;
+  color: #cbd5e1;
+  background: rgba(15,23,42,.75);
+  border-radius: 20px;
+  padding: 18px;
+}
+
+@media (max-width: 1450px) {
+  .func-kpis {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .func-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .func-item {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .func-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 780px) {
+  .func-page {
+    padding: 18px;
+  }
+
+  .func-hero {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .func-kpis,
+  .func-duo,
+  .func-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .func-item {
+    grid-template-columns: 1fr;
+  }
+
+  .func-avatar {
+    width: 100%;
+  }
+
+  .func-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .func-permissions div {
+    grid-template-columns: 1fr;
+  }
+}
+/* CORRECAO VISUAL DO CAMPO SENHA + BOTAO GERAR */
+.func-password {
+  display: grid;
+  grid-template-columns: 1fr 104px;
+  gap: 10px;
+  align-items: center;
+}
+
+.func-password input {
+  height: 46px;
+}
+
+.func-password button {
+  height: 46px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: #1f1300;
+  font-size: 12px;
+  font-weight: 1000;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px rgba(250, 204, 21, .18);
+  cursor: pointer;
+}
+
+.func-password button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* Corrige avatar/nome curto feio tipo AD */
+.func-avatar {
+  font-size: 18px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* FIX FINAL - AVATAR AD E BOTAO GERAR */
+.func-avatar {
+  height: 46px !important;
+  width: 46px !important;
+  min-width: 46px !important;
+  border-radius: 16px !important;
+  font-size: 14px !important;
+  font-weight: 1000 !important;
+  letter-spacing: 0 !important;
+  background: linear-gradient(135deg, #22c55e, #facc15) !important;
+  color: #052e16 !important;
+  box-shadow: 0 14px 30px rgba(34,197,94,.18) !important;
+}
+
+.func-password {
+  display: grid !important;
+  grid-template-columns: 1fr 86px !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.func-password input {
+  height: 48px !important;
+  border-radius: 16px !important;
+}
+
+.func-password button {
+  height: 48px !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, #facc15, #f59e0b) !important;
+  color: #241300 !important;
+  font-size: 11px !important;
+  font-weight: 1000 !important;
+  letter-spacing: .05em !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+}
+
+.func-password button:hover {
+  transform: translateY(-1px) !important;
+  filter: brightness(1.06) !important;
+}
+
+/* FIX FORCADO FINAL - AVATAR E BOTAO SENHA */
+.func-avatar {
+  height: 44px !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  border-radius: 14px !important;
+  font-size: 20px !important;
+  display: grid !important;
+  place-items: center !important;
+  background: rgba(34,197,94,.14) !important;
+  border: 1px solid rgba(34,197,94,.28) !important;
+  color: #bbf7d0 !important;
+  box-shadow: none !important;
+}
+
+.func-password {
+  grid-template-columns: 1fr 76px !important;
+  gap: 8px !important;
+}
+
+.func-password button {
+  height: 46px !important;
+  padding: 0 !important;
+  border-radius: 14px !important;
+  background: rgba(250,204,21,.14) !important;
+  border: 1px solid rgba(250,204,21,.35) !important;
+  color: #fde68a !important;
+  font-size: 11px !important;
+  font-weight: 950 !important;
+  letter-spacing: 0 !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+}
