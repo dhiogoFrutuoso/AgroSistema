@@ -1,6 +1,6 @@
 ﻿import jsPDF from "jspdf";
 import { FileText } from "lucide-react";
-import { getMaquinas } from "../services/maquinasService.js";
+import { getMaquinas } from "../services/MaquinasService.js";
 
 export default function MaquinasRelatorios() {
   function gerarPdf() {
