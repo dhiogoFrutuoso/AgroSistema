@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getOperators, createOperator, updateOperator, deleteOperator } from "../controllers/operatorController.js";
+import { getOperators, createOperator, updateOperator, deleteOperator } from "../controllers/OperatorController.js";
 
 const router = Router();
 
