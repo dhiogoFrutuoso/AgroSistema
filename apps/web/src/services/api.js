@@ -1,7 +1,13 @@
-﻿const API_BASE_URL =
+﻿let envUrl =
   import.meta.env.VITE_API_URL ||
   import.meta.env.VITE_API_BASE_URL ||
   "http://localhost:3000";
+
+if (envUrl.includes("agrosistema.onrender.com")) {
+  envUrl = "https://agrosistema.onrender.com";
+}
+
+const API_BASE_URL = envUrl;
 
 function getToken() {
   return localStorage.getItem("@arroz:token") || "";

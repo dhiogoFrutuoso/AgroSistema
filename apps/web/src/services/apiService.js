@@ -2,8 +2,13 @@
 
 const STORAGE_KEY = "@arroz:configuracoes";
 
+let defaultBackendUrl = "http://127.0.0.1:8090";
+if (import.meta.env.VITE_API_URL?.includes("agrosistema.onrender.com")) {
+  defaultBackendUrl = "https://agrosistema.onrender.com";
+}
+
 const defaultConfig = {
-  backendUrl: "http://127.0.0.1:8090"
+  backendUrl: defaultBackendUrl
 };
 
 export function getConfig() {
@@ -12,6 +17,11 @@ export function getConfig() {
 
 export function getBackendUrl() {
   const config = getConfig();
+  
+  if (config.backendUrl && config.backendUrl.includes("agrosistema.onrender.com") && config.backendUrl.includes("[")) {
+    return "https://agrosistema.onrender.com";
+  }
+  
   return config.backendUrl || defaultConfig.backendUrl;
 }
 
