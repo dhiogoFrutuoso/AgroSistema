@@ -1,11 +1,10 @@
 import { Request, Response } from "express";
-import { DocumentModel } from "../models/Document.js";
+import { AppDocument } from "../models/Document.js";
 import { Report } from "../models/Report.js";
-import { AuditLog } from "../models/Audit.js";
+import { Audit } from "../models/Audit.js";
 import { Setting } from "../models/Setting.js";
 
 export class SupportController {
-  // --- SETTINGS ---
   static async updateSetting(req: Request, res: Response): Promise<any> {
     try {
       const { key, value, description } = req.body;
@@ -23,13 +22,12 @@ export class SupportController {
     }
   }
 
-  // --- DOCUMENTS ---
   static async createDocument(req: Request, res: Response): Promise<any> {
     try {
       const { title, type, filePath, description, uploadedBy } = req.body;
       if (!title || !filePath) return res.status(400).json({ error: "Título e caminho do arquivo são obrigatórios" });
 
-      const doc = new DocumentModel({ title, type, filePath, description, uploadedBy: uploadedBy || undefined });
+      const doc = new AppDocument({ title, type, filePath, description, uploadedBy: uploadedBy || undefined });
       await doc.save();
       return res.status(201).json({ success: true, data: doc });
     } catch (error) {
@@ -38,10 +36,9 @@ export class SupportController {
     }
   }
 
-  // --- AUDIT LOGS ---
   static async listLogs(req: Request, res: Response): Promise<any> {
     try {
-      const logs = await AuditLog.find().populate("userId", "nome usuario").sort({ createdAt: -1 }).limit(100);
+      const logs = await Audit.find().populate("userId", "nome usuario").sort({ createdAt: -1 }).limit(100);
       return res.status(200).json({ data: logs });
     } catch (error) {
       console.error("❌ Erro ao listar logs:", error);

@@ -4,7 +4,6 @@ import { Irrigation } from "../models/Irrigation.js";
 import { Harvest } from "../models/Harvest.js";
 
 export class ProductionController {
-  // --- PLANTIOS ---
   static async startPlanting(req: Request, res: Response): Promise<any> {
     try {
       const { farmId, fieldId, cropVariety, startDate, estimatedHarvestDate } = req.body;
@@ -21,7 +20,6 @@ export class ProductionController {
     }
   }
 
-  // --- IRRIGAÇÕES ---
   static async logIrrigation(req: Request, res: Response): Promise<any> {
     try {
       const { fieldId, litersPerSquareMeter, durationMinutes, date, status } = req.body;
@@ -38,7 +36,6 @@ export class ProductionController {
     }
   }
 
-  // --- COLHEITAS ---
   static async logHarvest(req: Request, res: Response): Promise<any> {
     try {
       const { plantingId, fieldId, quantityTons, harvestDate, qualityGrade } = req.body;
@@ -49,8 +46,7 @@ export class ProductionController {
       const harvest = new Harvest({ plantingId, fieldId, quantityTons, harvestDate, qualityGrade });
       await harvest.save();
 
-      // Atualiza o status do plantio de origem para "concluido"
-      await Planting.findByIdAndUpdate(plantingId, { status: "concluido" });
+      await Planting.findByIdAndUpdate(plantingId, { status: "CONCLUIDO" });
 
       return res.status(201).json({ success: true, data: harvest });
     } catch (error) {
@@ -59,15 +55,14 @@ export class ProductionController {
     }
   }
 
-  // --- RELATÓRIO DA SAFRA ---
   static async getProductionSummary(req: Request, res: Response): Promise<any> {
     try {
-      const activePlantings = await Planting.find({ status: "em_andamento" })
+      const activePlantings = await Planting.find({ status: "EM_ANDAMENTO" })
         .populate("farmId", "name")
         .populate("fieldId", "name areaHa");
 
       const totalHarvested = await Harvest.find();
-      const totalTons = totalHarvested.reduce((acc, h) => acc + h.quantityTons, 0);
+      const totalTons = totalHarvested.reduce((acc, h) => acc + (h as any).quantityTons, 0);
 
       return res.status(200).json({
         activePlantingsCount: activePlantings.length,
